@@ -16,71 +16,108 @@
             <p><img src="../images/logo-jacana.png" alt=""></p>
             <p class="titre">Auberge du jacana africain</p>
         </a>
-        <!-- Ajouter un menu : Accueil, Historique, Région, Contact, Réservation -->
-        <p> <a href="../index.html">accueil</a> | <a href="index.html">réservation</a>
+        <nav class="navigation__principale">
+            <ul class="nav__liste">
+                <li class="nav__item">
+                    <a href="../index.html" class="nav__lien">Accueil</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html" class="nav__lien">Réservation</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__item">Historique</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__lien">Région</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__lien">Contact</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__lien">Réservation</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <h1>Réservation</h1>
-        <form id="reservation-form" action="reservation.html">
+        <form class="form" id="reservation-form" action="reservation.html" method="post">
             <div class="form-section">
-                <h2>1. Vérifier la disponibilité</h2>
-                <label for="date-arrivee">Date d'arrivée :</label>
-                <input type="date" id="date-arrivee" name="date-arrivee">
-
-                <label for="date-depart">Date de départ :</label>
-                <input type="date" id="date-depart" name="date-depart">
-
-                <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
-                <p id="availability-message"></p>
+                <fieldset class="form-section__fieldset">
+                    <legend>1. Vérifier la disponibilité</legend>
+                    <label for="date-arrivee">Date d'arrivée :</label>
+                    <input type="date" required pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
+                        id="date-arrivee" name="date-arrivee">
+                    <label for="date-depart">Date de départ :</label>
+                    <input type="date" required pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
+                        id="date-depart" name="date-depart">
+                    <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
+                    <p id="availability-message"></p>
+                </fieldset>
             </div>
 
             <div class="form-section">
-                <h2>2. Nombre de personnes </h2>
-                <label>Adultes (maximum 4):</label>
-                <input id="adultes" name="adultes">
-
-                <label>Enfants (maximum 5):</label>
-                <input id="enfants" name="enfants">
-
-                <p>
-                    Notes: <br>
-                    1. la chambre familiale peut loger jusqu'à 6 personnes<br>
-                    2. si vous avez besoin de louer plusieurs chambres, <a href="">contactez-nous directement</a>
-                </p>
+                <fieldset class="form-section__fieldset">
+                    <legend>2. Nombre de personnes </legend>
+                    <label for="number">Adultes (maximum 4):</label>
+                    <input id="adultes" name="adultes">
+                    <label for="number">Enfants (maximum 5):</label>
+                    <input id="enfants" name="enfants">
+                    <p>
+                        Notes: <br>
+                        1. la chambre familiale peut loger jusqu'à 6 personnes<br>
+                        2. si vous avez besoin de louer plusieurs chambres, <a href="#">contactez-nous directement</a>
+                    </p>
+                </fieldset>
             </div>
 
             <div class="form-section">
-                <h2>3. Choix chambre et forfait </h2>
+                <fieldset class="form-section__fieldset">
+                    <legend>3. Choix chambre et forfait </legend>
+                    <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale
+                    Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
 
-                <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
-                Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
+                    <input type="radio" id="type_simple" name="type_simple">
+                    <label for="type_simple"><img src="../images/types-de-chambre/1-lit-double.webp"
+                            width="150px"></label>
 
-                <!-- [case à cocher] Inclure le petit déjeuner s'il-vous-plaît -->
+                    <input type="radio" id="type_double" name="type_double">
+                    <label for="type_double"><img src="../images/types-de-chambre/2-lits-double.jpg"
+                            width="150px"></label>
 
-                <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
-                    12.50$
-                    CAN.</p>
+                    <input type="radio" id="type_familiale" name="type_familiale">
+                    <label for="type_familiale"><img src="../images/types-de-chambre/chambre-familiale.jpg"
+                            width="150px"></label>
+
+                    <!-- [case à cocher] Inclure le petit déjeuner s'il-vous-plaît -->
+
+                    <input type="checkbox" id="dejeuner" name="dejeuner">
+                    <label for="dejeuner">Inclure le petit déjeuner s'il-vous-plait</label>
+
+                    <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
+                        12.50$
+                        CAN.</p>
+                </fieldset>
 
             </div>
 
             <div class="form-section">
-                <h2>4. Identification</h2>
-                <label>Prénom :</label>
-                <input id="prenom" name="prenom">
-
-                <label>Nom :</label>
-                <input id="nom" name="nom">
-
-                <label>Email :</label>
-                <input id="email" name="email">
-
-                <label>Téléphone :</label>
-                <input id="telephone" name="telephone">
+                <fieldset class="form-section__fieldset">
+                    <legend>4. Identification</legend>
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom">
+                    <label for="email">Email :</label>
+                    <input type="text" id="email" name="email">
+                    <label for="telephone">Téléphone :</label>
+                    <input type="text" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone" name="telephone">
+                </fieldset>
 
             </div>
 
-            <p><button type="submit">Confirmer la réservation</button></p>
+            <button name="confirmer" value="confirmer">Confirmer la réservation</button>
         </form>
     </main>
     <hr>
@@ -88,10 +125,10 @@
         <h2>Nous joindre</h2>
         <h3>aubergedujacana@gmail.com</h3>
         <p>
-            Pour toutes demandes d’information, ou pour faire une demande de réservation pour l’un de nos chalets,
+            Pour toutes demandes d'information, ou pour faire une demande de réservation pour l'un de nos chalets,
             remplisser le formulaire ci-contre.
             Si vous préférez, vous pouvez nous contacter par courriel.
-            Afin d’assurer un suivi rapide et efficace, veuillez préciser le chalet désiré, les périodes visées ainsi
+            Afin d'assurer un suivi rapide et efficace, veuillez préciser le chalet désiré, les périodes visées ainsi
             que le nombre de personnes (adultes et enfants) qui y séjourneront.
 
         </p>
