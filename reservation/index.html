@@ -61,9 +61,9 @@
                 <fieldset class="form-section__fieldset">
                     <legend>2. Nombre de personnes </legend>
                     <label for="number">Adultes (maximum 4):</label>
-                    <input id="adultes" name="adultes">
+                    <input id="adultes" minlength="3" maxlength="4" name="adultes">
                     <label for="number">Enfants (maximum 5):</label>
-                    <input id="enfants" name="enfants">
+                    <input id="enfants" minlength="3" maxlength="5" name="enfants">
                     <p>
                         Notes: <br>
                         1. la chambre familiale peut loger jusqu'à 6 personnes<br>
@@ -71,11 +71,11 @@
                     </p>
                 </fieldset>
             </div>
-
+            
             <div class="form-section">
                 <fieldset class="form-section__fieldset">
                     <legend>3. Choix chambre et forfait </legend>
-                    <input type="radio" id="type_simple" name="type_chambre">
+                    <input type="radio" required="required"  id="type_simple" name="type_chambre">
                     <label for="type_simple"><img src="../images/types-de-chambre/1-lit-double.webp"
                             width="150px"></label>
 
@@ -101,11 +101,11 @@
                 <fieldset class="form-section__fieldset">
                     <legend>4. Identification</legend>
                     <label for="prenom">Prénom :</label>
-                    <input type="text" id="prenom" name="prenom">
+                    <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+"id="prenom" name="prenom">
                     <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom">
+                    <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+"id="nom" name="nom">
                     <label for="email">Email :</label>
-                    <input type="text" id="email" name="email">
+                    <input type="email" required id="email" name="email">
                     <label for="telephone">Téléphone :</label>
                     <input type="text" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone" name="telephone">
                 </fieldset>
