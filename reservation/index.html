@@ -47,20 +47,85 @@
             <div class="form-section">
                 <fieldset class="form-section__fieldset">
                     <legend>
-                        <h2>Vérifier la disponibilité</h2>
+                        <h2>1. Vérifier la disponibilité</h2>
                     </legend>
-                    <label for="date-arrivee">Date d'arrivée :</label>
-                    <input type="date" required id="date-arrivee" name="date-arrivee">
-                    <label for="date-depart">Date de départ :</label>
-                    <input type="date" required id="date-depart" name="date-depart">
-                    <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
-                    <p id="availability-message"></p>
-                </fieldset>
+                    <fieldset>
+                        <legend>
+                            <h3>Date d'arrivée</h3>
+                        </legend>
+                        <div class="fieldset__disponibilites">
+                            <p>
+                                <select id="jour-arrive" name="jour-arrivee">
+                                    <option label="jour"></option>
+                                    <!-- option[value=$]{$}*31 -->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select id="mois-arrive" name="mois-arrivee">
+                                    <option label="mois"></option>
+                                    <!-- option[value=janvier]{janvier}*12 -->
+                                    <option value="janvier">janvier</option>
+                                    <option value="février">février</option>
+                                    <option value="mars">mars</option>
+                                    <option value="avril">avril</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select id="annee-arrive" name="annee-arrivee">
+                                    <option label="année"></option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                </select>
+                            </p>
+
+                            <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
+                    </fieldset>
+
+            </div>
+
+
+
+            <p id="availability-message"></p>
+
+            </fieldset>
             </div>
 
             <div class="form-section">
                 <fieldset class="form-section__fieldset">
-                    <legend><h2>Nombre de personnes </h2></legend>
+                    <legend>
+                        <h2>2. Nombre de personnes </h2>
+                    </legend>
                     <label for="adultes">Adultes (maximum 4):</label>
                     <input id="adultes" minlength="1" maxlength="4" name="adultes">
                     <label for="adultes">Enfants (maximum 5):</label>
@@ -75,21 +140,30 @@
 
             <div class="form-section">
                 <fieldset class="form-section__fieldset">
-                    <legend><h2>Choix chambre et forfait </h2></legend>
-                    <input type="radio" required="required" id="type_simple" name="type_chambre">
-                    <label for="type_simple"><img src="../images/types-de-chambre/1-lit-double.webp"
-                            alt="chambre avec lit type double" width="150"></label>
-
-                    <input type="radio" id="type_double" name="type_chambre">
-                    <label for="type_double"><img src="../images/types-de-chambre/2-lits-double.jpg"
-                            alt="chambre avec deux lit type double" width="150"></label>
-
-                    <input type="radio" id="type_familiale" name="type_chambre">
-                    <label for="type_familiale"><img src="../images/types-de-chambre/chambre-familiale.jpg"
-                            alt="chambre familiale avec lits pour enfants et adultes" width="150"></label>
-
-                    <input type="checkbox" id="dejeuner" name="dejeuner">
-                    <label for="dejeuner">Inclure le petit déjeuner s'il-vous-plait</label>
+                    <legend>
+                        <h2>3. Choix chambre et forfait </h2>
+                    </legend>
+                    <ul class="rangee">
+                        <li>
+                            <input type="radio" required="required" id="type_simple" name="type_chambre">
+                            <label for="type_simple"><img src="../images/types-de-chambre/1-lit-double.webp"
+                                    alt="chambre avec lit type double" width="150"></label>
+                        </li>
+                        <li>
+                            <input type="radio" id="type_double" name="type_chambre">
+                            <label for="type_double"><img src="../images/types-de-chambre/2-lits-double.jpg"
+                                    alt="chambre avec deux lit type double" width="150"></label>
+                        </li>
+                        <li>
+                            <input type="radio" id="type_familiale" name="type_chambre">
+                            <label for="type_familiale"><img src="../images/types-de-chambre/chambre-familiale.jpg"
+                                    alt="chambre familiale avec lits pour enfants et adultes" width="150"></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="dejeuner" name="dejeuner">
+                            <label for="dejeuner">Inclure le petit déjeuner s'il-vous-plait</label>
+                        </li>
+                    </ul>
 
                     <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
                         12.50$
@@ -100,7 +174,9 @@
 
             <div class="form-section">
                 <fieldset class="form-section__fieldset">
-                    <legend><h2>Identification</h2></legend>
+                    <legend>
+                        <h2>4. Identification</h2>
+                    </legend>
                     <label for="prenom">Prénom :</label>
                     <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+" id="prenom" minlength="3" maxlength="45"
                         name="prenom">
