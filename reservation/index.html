@@ -47,11 +47,9 @@
                 <fieldset class="form-section__fieldset">
                     <legend>1. Vérifier la disponibilité</legend>
                     <label for="date-arrivee">Date d'arrivée :</label>
-                    <input type="date" required pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
-                        id="date-arrivee" name="date-arrivee">
+                    <input type="date" required id="date-arrivee" name="date-arrivee">
                     <label for="date-depart">Date de départ :</label>
-                    <input type="date" required pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"
-                        id="date-depart" name="date-depart">
+                    <input type="date" required id="date-depart" name="date-depart">
                     <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
                     <p id="availability-message"></p>
                 </fieldset>
@@ -60,10 +58,10 @@
             <div class="form-section">
                 <fieldset class="form-section__fieldset">
                     <legend>2. Nombre de personnes </legend>
-                    <label for="number">Adultes (maximum 4):</label>
-                    <input id="adultes" minlength="3" maxlength="4" name="adultes">
-                    <label for="number">Enfants (maximum 5):</label>
-                    <input id="enfants" minlength="3" maxlength="5" name="enfants">
+                    <label for="adultes">Adultes (maximum 4):</label>
+                    <input id="adultes" minlength="1" maxlength="4" name="adultes">
+                    <label for="adultes">Enfants (maximum 5):</label>
+                    <input id="enfants" minlength="1" maxlength="5" name="enfants">
                     <p>
                         Notes: <br>
                         1. la chambre familiale peut loger jusqu'à 6 personnes<br>
@@ -71,21 +69,21 @@
                     </p>
                 </fieldset>
             </div>
-            
+
             <div class="form-section">
                 <fieldset class="form-section__fieldset">
                     <legend>3. Choix chambre et forfait </legend>
-                    <input type="radio" required="required"  id="type_simple" name="type_chambre">
+                    <input type="radio" required="required" id="type_simple" name="type_chambre">
                     <label for="type_simple"><img src="../images/types-de-chambre/1-lit-double.webp"
-                            width="150px"></label>
+                            alt="chambre avec lit type double" width="150"></label>
 
                     <input type="radio" id="type_double" name="type_chambre">
                     <label for="type_double"><img src="../images/types-de-chambre/2-lits-double.jpg"
-                            width="150px"></label>
+                            alt="chambre avec deux lit type double" width="150"></label>
 
                     <input type="radio" id="type_familiale" name="type_chambre">
                     <label for="type_familiale"><img src="../images/types-de-chambre/chambre-familiale.jpg"
-                            width="150px"></label>
+                            alt="chambre familiale avec lits pour enfants et adultes" width="150"></label>
 
                     <input type="checkbox" id="dejeuner" name="dejeuner">
                     <label for="dejeuner">Inclure le petit déjeuner s'il-vous-plait</label>
@@ -101,11 +99,13 @@
                 <fieldset class="form-section__fieldset">
                     <legend>4. Identification</legend>
                     <label for="prenom">Prénom :</label>
-                    <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+"id="prenom" name="prenom">
+                    <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+" id="prenom" minlength="3" maxlength="45"
+                        name="prenom">
                     <label for="nom">Nom :</label>
-                    <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+"id="nom" name="nom">
+                    <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+" minlength="3" maxlength="45" id="nom"
+                        name="nom">
                     <label for="email">Email :</label>
-                    <input type="email" required id="email" name="email">
+                    <input type="email" required minlength="3" maxlength="20" id="email" name="email">
                     <label for="telephone">Téléphone :</label>
                     <input type="text" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone" name="telephone">
                 </fieldset>
