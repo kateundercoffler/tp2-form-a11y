@@ -45,212 +45,278 @@
         <h1>Réservation</h1>
         <form class="form" id="reservation-form" action="reservation.html" method="post">
             <div class="form-section">
-                <fieldset class="form-section__fieldset">
+                <fieldset class="form__section disponibilite">
                     <legend>
-                        <h2>1. Vérifier la disponibilité</h2>
+                        <h2>1. Dates du séjour</h2>
                     </legend>
                     <fieldset>
                         <legend>
                             <h3>Date d'arrivée</h3>
                         </legend>
                         <div class="fieldset__disponibilites">
-                            <p>
-                                <select id="jour-arrive" name="jour-arrivee">
-                                    <option label="jour"></option>
-                                    <!-- option[value=$]{$}*31 -->
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-                                </select>
-                            </p>
-                            <p>
-                                <select id="mois-arrive" name="mois-arrivee">
-                                    <option label="mois"></option>
-                                    <!-- option[value=janvier]{janvier}*12 -->
-                                    <option value="janvier">janvier</option>
-                                    <option value="février">février</option>
-                                    <option value="mars">mars</option>
-                                    <option value="avril">avril</option>
-                                </select>
-                            </p>
-                            <p>
-                                <select id="annee-arrive" name="annee-arrivee">
-                                    <option label="année"></option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                </select>
-                            </p>
-                            
-                                <legend>
-                                    <h3>Date de départ</h3>
-                                </legend>
-                                <div class="date__depart">
-                                    <p>
-                                        <select id="jour-depart" name="jour-depart">
-                                            <option label="jour"></option>
-                                            <!-- option[value=$]{$}*31 -->
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                            <option value="31">31</option>
-                                        </select>
-                                    </p>
-                                    <p>
-                                        <select id="mois-depart" name="mois-depart">
-                                            <option label="mois"></option>
-                                            <!-- option[value=janvier]{janvier}*12 -->
-                                            <option value="janvier">janvier</option>
-                                            <option value="février">février</option>
-                                            <option value="mars">mars</option>
-                                            <option value="avril">avril</option>
-                                        </select>
-                                    </p>
-                                    <p>
-                                        <select id="annee-depart" name="annee-depart">
-                                            <option label="année"></option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                        </select>
-                                    </p>
-
-                                </div>
-                            
-                            
-
-                            <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
+                            <select id="jour-arrive" name="jour-arrivee">
+                                <option label="jour"></option>
+                                <!-- option[value=$]{$}*31 -->
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <select id="mois-arrive" name="mois-arrivee">
+                                <option label="mois"></option>
+                                <!-- option[value=janvier]{janvier}*12 -->
+                                <option value="janvier">janvier</option>
+                                <option value="février">février</option>
+                                <option value="mars">mars</option>
+                                <option value="avril">avril</option>
+                            </select>
+                            <select id="annee-arrive" name="annee-arrivee">
+                                <option label="année"></option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                            </select>
+                        </div>
                     </fieldset>
-            </div>
-            <p id="availability-message"></p>
-
-            </fieldset>
-            </div>
-
-            <div class="form-section">
-                <fieldset class="form-section__fieldset">
-                    <legend>
-                        <h2>2. Nombre de personnes </h2>
-                    </legend>
-                    <label for="adultes">Adultes (maximum 4):</label>
-                    <input id="adultes" minlength="1" maxlength="4" name="adultes">
-                    <label for="adultes">Enfants (maximum 5):</label>
-                    <input id="enfants" minlength="1" maxlength="5" name="enfants">
-                    <p>
-                        Notes: <br>
-                        1. la chambre familiale peut loger jusqu'à 6 personnes<br>
-                        2. si vous avez besoin de louer plusieurs chambres, <a href="#">contactez-nous directement</a>
+                    <fieldset>
+                        <legend>
+                            <h3>Date de départ</h3>
+                        </legend>
+                        <div class="date__depart">
+                            <select id="jour-depart" name="jour-depart">
+                                <option label="jour"></option>
+                                <!-- option[value=$]{$}*31 -->
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <select id="mois-depart" name="mois-depart">
+                                <option label="mois"></option>
+                                <!-- option[value=janvier]{janvier}*12 -->
+                                <option value="janvier">janvier</option>
+                                <option value="février">février</option>
+                                <option value="mars">mars</option>
+                                <option value="avril">avril</option>
+                            </select>
+                            <select id="annee-depart" name="annee-depart">
+                                <option label="année"></option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <p class="bouton__verfifier">
+                        <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Message d'erreur par JavaScript
                     </p>
                 </fieldset>
             </div>
+            <p id="availability-message"></p>
 
-            <div class="form-section">
-                <fieldset class="form-section__fieldset">
-                    <legend>
-                        <h2>3. Choix chambre et forfait </h2>
-                    </legend>
-                    <ul class="rangee">
+
+
+            <!-- NOMBRE DE PERSONNES -->
+            <fieldset class="form__section ctnValidation">
+                <legend>
+                    <h2>2. Nombre de personnes </h2>
+                </legend>
+                <div class="row">
+                    <p class="row__adultes">
+                        <label for="adultes">Adultes (maximum 4):</label>
+                        <input id="adultes" minlength="1" maxlength="4" name="adultes">
+                    </p>
+                    <div class="row">
+                        <p class="row__enfants">
+                            <label for="adultes">Enfants (maximum 5):</label>
+                            <input id="enfants" minlength="1" maxlength="5" name="enfants">
+                        </p>
+                    </div>
+
+                    <h3>Notes:</h3>
+                    <ol>
                         <li>
+                            La chambre familiale peut loger jusqu'à 6 personnes
+                        </li>
+                        <li>Si vous avez besoin de louer plusieurs chambres, <a href="#">contactez-nous
+                                directement</a></li>
+
+                    </ol>
+
+                </div>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--erreur" aria-hidden="true"></span>
+                    </span>
+                    Message d'erreur par JavaScript
+                </p>
+            </fieldset>
+
+
+
+            <fieldset class="form__section choixChambres">
+                <legend>
+                    <h2>3. Choix chambre et forfait </h2>
+                </legend>
+
+                <fieldset class="ctnValidation">
+                    <legend>Choisir votre chambre</legend>
+                    <ul class="row">
+                        <li class="row__chambreSimple">
                             <input type="radio" required="required" id="type_simple" name="type_chambre">
                             <label for="type_simple"><img src="../images/types-de-chambre/1-lit-double.webp"
                                     alt="chambre avec lit type double" width="150"></label>
                         </li>
-                        <li>
+                        <li class="row__chambreDouble">
                             <input type="radio" id="type_double" name="type_chambre">
                             <label for="type_double"><img src="../images/types-de-chambre/2-lits-double.jpg"
                                     alt="chambre avec deux lit type double" width="150"></label>
                         </li>
-                        <li>
+                        <li class="row__chambreFamille">
                             <input type="radio" id="type_familiale" name="type_chambre">
                             <label for="type_familiale"><img src="../images/types-de-chambre/chambre-familiale.jpg"
                                     alt="chambre familiale avec lits pour enfants et adultes" width="150"></label>
                         </li>
-                        <li>
-                            <input type="checkbox" id="dejeuner" name="dejeuner">
-                            <label for="dejeuner">Inclure le petit déjeuner s'il-vous-plait</label>
-                        </li>
                     </ul>
-
-                    <p> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Message d'erreur par JavaScript
+                    </p>
+                </fieldset>
+                <div class="cocher__dejeuner">
+                    <input type="checkbox" id="dejeuner" name="dejeuner">
+                    <label for="dejeuner">Inclure le petit déjeuner s'il-vous-plait</label>
+                    <p class="dejeuner"> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins
+                        de 12 ans c'est
                         12.50$
                         CAN.</p>
-                </fieldset>
+                </div>
+            </fieldset>
 
-            </div>
 
-            <div class="form-section">
-                <fieldset class="form-section__fieldset">
-                    <legend>
-                        <h2>4. Identification</h2>
-                    </legend>
-                    <label for="prenom">Prénom :</label>
-                    <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+" id="prenom" minlength="3" maxlength="45"
-                        name="prenom">
-                    <label for="nom">Nom :</label>
-                    <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+" minlength="3" maxlength="45" id="nom"
-                        name="nom">
-                    <label for="email">Email :</label>
-                    <input type="email" required minlength="3" maxlength="20" id="email" name="email">
-                    <label for="telephone">Téléphone :</label>
-                    <input type="text" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone" name="telephone">
-                </fieldset>
+            <fieldset class="form__section identification">
+                <legend>
+                    <h2>4. Identification</h2>
+                </legend>
+                <div class="ctnValidation prenom">
+                    <p>
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+" id="prenom" minlength="3" maxlength="45"
+                            name="prenom">
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Message d'erreur par JavaScript
+                    </p>
+                </div>
+                <div class="ctnValidation nom">
+                    <p>
+                        <label for="nom">Nom :</label>
+                        <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+" minlength="3" maxlength="45" id="nom"
+                            name="nom">
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Message d'erreur par JavaScript
+                    </p>
+                </div>
+                <div class="ctnValidation">
+                    <p>
+                        <label for="email">Email :</label>
+                        <input type="email" required minlength="3" maxlength="20" id="email" name="email">
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Message d'erreur par JavaScript
+                    </p>
+                </div>
+                <label for="telephone">Téléphone :</label>
+                <input type="text" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone" name="telephone">
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--erreur" aria-hidden="true"></span>
+                    </span>
+                    Message d'erreur par JavaScript
+                </p>
+            </fieldset>
 
-            </div>
 
-            <button name="confirmer" value="confirmer">Confirmer la réservation</button>
+
+            <p class="bouton__confirmation"><button name="confirmer" value="confirmer">Confirmer la réservation</button>
+            </p>
         </form>
     </main>
     <hr>
@@ -259,7 +325,8 @@
         <h3>aubergedujacana@gmail.com</h3>
         <p>
             Pour toutes demandes d'information, ou pour faire une demande de réservation pour l'un de nos chalets,
-            remplisser le formulaire ci-contre.
+            remplisser le formulaire ci-contre.</p>
+        <p>
             Si vous préférez, vous pouvez nous contacter par courriel.
             Afin d'assurer un suivi rapide et efficace, veuillez préciser le chalet désiré, les périodes visées ainsi
             que le nombre de personnes (adultes et enfants) qui y séjourneront.
