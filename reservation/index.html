@@ -12,29 +12,30 @@
 </head>
 
 <body>
-    <header>
+    <a href="#contenu" class="screen-reader-only focusable"></a>
+    <header role="banner">
         <a href="../index.html">
             <p><img src="../images/logo-jacana.png" alt=""></p>
             <p class="titre">Auberge du jacana africain</p>
         </a>
         <nav class="navigation__principale">
             <ul class="nav__liste">
-                <li class="nav__item">
+                <li class="nav__liste-item">
                     <a href="../index.html" class="nav__lien">Accueil</a>
                 </li>
-                <li class="nav__item">
+                <li class="nav__liste-item">
                     <a href="index.html" class="nav__lien">Réservation</a>
                 </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__item">Historique</a>
+                <li class="nav__liste-item">
+                    <a href="#" class="nav__lien">Historique</a>
                 </li>
-                <li class="nav__item">
+                <li class="nav__liste-item">
                     <a href="#" class="nav__lien">Région</a>
                 </li>
-                <li class="nav__item">
+                <li class="nav__liste-item">
                     <a href="#" class="nav__lien">Contact</a>
                 </li>
-                <li class="nav__item">
+                <li class="nav__liste-item">
                     <a href="#" class="nav__lien">Réservation</a>
                 </li>
             </ul>
@@ -45,11 +46,11 @@
         <h1>Réservation</h1>
         <form class="form" id="reservation-form" action="reservation.html" method="post">
             <div class="form-section">
-                <fieldset class="form__section disponibilite">
+                <fieldset class="form__section ctnValidation disponibilite">
                     <legend>
                         <h2>1. Dates du séjour</h2>
                     </legend>
-                    <fieldset>
+                    <fieldset class="form__section ctnValidation arrivee">
                         <legend>
                             <h3>Date d'arrivée</h3>
                         </legend>
@@ -104,7 +105,7 @@
                             </select>
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="form__section ctnValidation depart">
                         <legend>
                             <h3>Date de départ</h3>
                         </legend>
@@ -214,12 +215,12 @@
 
 
 
-            <fieldset class="form__section choixChambres">
+            <fieldset class="form__section ctnValidation choixChambres">
                 <legend>
                     <h2>3. Choix chambre et forfait </h2>
                 </legend>
 
-                <fieldset class="ctnValidation">
+                <fieldset class="ctnValidation chambres">
                     <legend>Choisir votre chambre</legend>
                     <ul class="row">
                         <li class="row__chambreSimple">
@@ -249,7 +250,8 @@
                 <div class="cocher__dejeuner">
                     <input type="checkbox" id="dejeuner" name="dejeuner">
                     <label for="dejeuner">Inclure le petit déjeuner s'il-vous-plait</label>
-                    <p class="dejeuner"> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins
+                    <p class="dejeuner"> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de
+                        moins
                         de 12 ans c'est
                         12.50$
                         CAN.</p>
@@ -257,7 +259,7 @@
             </fieldset>
 
 
-            <fieldset class="form__section identification">
+            <fieldset class="form__section ctnValidation identification">
                 <legend>
                     <h2>4. Identification</h2>
                 </legend>
@@ -289,7 +291,7 @@
                         Message d'erreur par JavaScript
                     </p>
                 </div>
-                <div class="ctnValidation">
+                <div class="ctnValidation courriel">
                     <p>
                         <label for="email">Email :</label>
                         <input type="email" required minlength="3" maxlength="20" id="email" name="email">
@@ -315,7 +317,8 @@
 
 
 
-            <p class="bouton__confirmation"><button name="confirmer" value="confirmer">Confirmer la réservation</button>
+            <p class="bouton__confirmation"><button name="confirmer" value="confirmer">Confirmer la
+                    réservation</button>
             </p>
         </form>
     </main>
@@ -328,7 +331,8 @@
             remplisser le formulaire ci-contre.</p>
         <p>
             Si vous préférez, vous pouvez nous contacter par courriel.
-            Afin d'assurer un suivi rapide et efficace, veuillez préciser le chalet désiré, les périodes visées ainsi
+            Afin d'assurer un suivi rapide et efficace, veuillez préciser le chalet désiré, les périodes visées
+            ainsi
             que le nombre de personnes (adultes et enfants) qui y séjourneront.
 
         </p>
@@ -337,7 +341,8 @@
         <!-- Intégrer les medias sociaux instagram et facebook + un bouton pour partager cette page -->
         <p>
             Ce site Web est un projet pédagogique réalisé par
-            <a href="">Prénom et Nom</a> et <a href="">Prénom et Nom</a> dans le cadre du cours 582-204-SF Intégration
+            <a href="">Prénom et Nom</a> et <a href="">Prénom et Nom</a> dans le cadre du cours 582-204-SF
+            Intégration
             II,
             programme des <a href="">Techniques d'intégration multimédia</a>,
             <a href="">Cégep de Sainte-Foy</a>.
