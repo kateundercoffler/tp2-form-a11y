@@ -1,2 +1,16 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Overpass:wght@400;700&display=swap');
+
+@import url(normalize.css);
+@import url(utilitaires.css);
+@import url(typo);
+
+
+
+
+/* HEADERS */
+h1 {
+    font-family:'Overpass';
+    font-size: 2rem;
+}
