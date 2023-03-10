@@ -1,16 +1,26 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Overpass:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Noto+Serif:wght@400;700&display=swap');
 
 @import url(normalize.css);
 @import url(utilitaires.css);
 @import url(typo);
 
 
-
+body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    max-width: 85%;
+    margin: auto;  
+  }
 
 /* HEADERS */
 h1 {
-    font-family:'Overpass';
+    font-family:'Noto Serif';
     font-size: 2rem;
+}
+h2,
+h3 {
+    font-family: 'Mulish';
+    font-size: 1rem;
 }
