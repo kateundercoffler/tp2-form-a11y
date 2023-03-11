@@ -7,7 +7,7 @@
 @import url(typo);
 
 
-body {
+html {
     margin-left: 2rem;
     margin-right: 2rem;
     max-width: 85%;
@@ -23,4 +23,26 @@ h2,
 h3 {
     font-family: 'Mulish';
     font-size: 1rem;
+}
+header {
+    background-color: rgb(128, 106, 97);
+    width: 100%;
+    
+}
+
+/* NAVIGATION */
+.nav__liste {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    background-color: rgb(61, 80, 74); 
+    list-style: none;   
+}
+a {
+    font-weight: bold;
+    color: white;
+    list-style: none;
+    font-family: 'Mulish';
 }
