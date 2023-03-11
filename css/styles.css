@@ -17,7 +17,8 @@ html {
     max-width: 1000px;
     margin-right: 3rem;
     margin-left: 3rem;
- } 
+ }
+
 /* HEADERS */
 h1 {
     font-family:'Noto Serif';
@@ -31,8 +32,7 @@ h3 {
 header {
     background-color: rgb(128, 106, 97);
     width: 100%;
-    
-    
+    margin-right: -15px;     
 }
 
 /* NAVIGATION */
@@ -43,7 +43,9 @@ header {
     align-items: center;
     font-size: 1rem;
     background-color: rgb(61, 80, 74); 
-    list-style: none; 
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 30px;
       
 }
 a {
@@ -51,6 +53,10 @@ a {
     color: white;
     list-style: none;
     font-family: 'Mulish';
+}
+a .nav__lien:hover,
+a .nav__lien:active {
+    font-weight: bold;
 }
 
 
