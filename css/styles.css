@@ -8,12 +8,16 @@
 
 
 html {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    max-width: 85%;
-    margin: auto;  
+    margin-left: 10rem;
+    margin-right: 10rem;
+    max-width: 1300px;
+    margin: 0 auto;  
   }
-
+ main {
+    max-width: 1000px;
+    margin-right: 3rem;
+    margin-left: 3rem;
+ } 
 /* HEADERS */
 h1 {
     font-family:'Noto Serif';
@@ -28,21 +32,36 @@ header {
     background-color: rgb(128, 106, 97);
     width: 100%;
     
+    
 }
 
 /* NAVIGATION */
 .nav__liste {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
     background-color: rgb(61, 80, 74); 
-    list-style: none;   
+    list-style: none; 
+      
 }
 a {
     font-weight: bold;
     color: white;
     list-style: none;
     font-family: 'Mulish';
+}
+
+
+
+/* ASIDE */
+aside {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.footer__paragraphe {
+    margin-right: 3rem;
+    margin-left: 3rem;
 }
