@@ -9,9 +9,6 @@ Typo enlevé parce que j'ai travaillé dans styles.css*/
 
 
 html {
-    margin-left: 10rem;
-    margin-right: 10rem;
-    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -145,12 +142,24 @@ fieldset {
     justify-content: center;
 }
 
+/* CHAMPS DE SAISIE - PERSONNES */
+
+#adultes,#enfants {
+    width: 40px;
+}
+
 /* IMAGES DE CHAMBRES */
 .chambres {
     max-width: 180px;
-    margin-left: 20px;
     justify-content: center;
 }
+
+@media (min-width: 600px) {
+    .chambres {
+        max-width: 400px;
+    }
+}
+
 /* FILTRE POUR LES IMAGES */
 input[type=radio] + label {
     filter: grayscale(100%);
@@ -168,7 +177,7 @@ input[type=radio] {
 .cocher__dejeuner {
     display: block;
     justify-content: center;
-
+    max-width: 500px;
 }
 
 
@@ -239,7 +248,9 @@ button {
     background-color: rgb(197, 255, 237);
     padding: 10px;
     font-family: 'Mulish';
-    color: black;    
+    color: black;
+    display: block;
+    margin: auto;
 }
 button:hover,
 button:focus {
@@ -247,7 +258,6 @@ button:focus {
     background-color: rgb(166, 234, 213);
     box-shadow: 5px 5px 5px rgb(120, 120, 120);
 }
-
 
 /* ASIDE */
 aside {
@@ -261,6 +271,7 @@ aside {
     background-color: rgb(176, 189, 185);
     font-family: 'Mulish';
     padding: 20px;
+    margin-bottom: 0;
 }
 
 .footer__paragraphe a {
