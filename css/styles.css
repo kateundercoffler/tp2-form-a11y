@@ -69,6 +69,32 @@ header a {
     text-decoration: none;
 }
 
+/* ERREURS */
+/* .erreur {
+    
+} */
+
+.icone {
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    background-image: url("../images/icones/good-warning-error.png");
+    background-size: cover;
+    position: relative;
+    top: 5px;
+}
+
+.icone--ok {
+    background-position: 0 0;
+}
+
+.icone--avertissement {
+    background-position: 49px 0;
+}
+.icone--erreur {
+    background-position: 101px 0;
+}
+
 /* FORMULAIRES */
 h2 {
     font-weight: bold;
