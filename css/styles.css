@@ -4,82 +4,115 @@
 
 @import url(normalize.css);
 @import url(utilitaires.css);
-@import url(typo);
+/* @import url(typo.css); */
 
 
 html {
     margin-left: 10rem;
     margin-right: 10rem;
     max-width: 1300px;
-    margin: 0 auto;  
-  }
- main {
+    margin: 0 auto;
+}
+
+main {
     max-width: 1000px;
     margin-right: 3rem;
     margin-left: 3rem;
- }
- img {
+}
+
+img {
     max-width: 150px;
     margin-left: 250px;
     margin-top: 20px;
- }
+}
 
- /* TITRE */
- .titre {
+/* TITRE */
+.titre {
     font-family: 'Noto Serif';
     font-size: 3rem;
- }
+}
 
 /* HEADERS */
 h1 {
     font-family: 'Noto Serif';
     font-size: 2rem;
 }
+
 h2,
 h3 {
     font-family: 'Mulish';
     font-size: 1rem;
 }
+
 header {
     background-color: rgb(128, 106, 97);
     width: 100%;
-    margin-right: -15px;     
+    margin-right: -15px;
 }
 
 /* FORMULAIRES */
 h2 {
     font-weight: bold;
 }
+
 fieldset {
     border: none;
 }
+
 .form__section.ctnValidation.disponibilite {
     display: flex;
     border: 1px solid rgb(61, 80, 74);
     flex-direction: row;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.form__section.ctnValidation.personnes {
+    display: flex;
+    border: 1px solid rgb(61, 80, 74);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.form__section.ctnValidation.choixChambres {
+    border: 1px solid rgb(61, 80, 74);
+}
+
+.row li {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+/* IMAGES - FIELDSETS */
+.chambres {
+    max-width: 300px;
+    margin-left: 20px;
+    justify-content: center;
 }
 
 /* NAVIGATION */
 .nav__liste {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
-    background-color: rgb(61, 80, 74); 
+    background-color: rgb(61, 80, 74);
     list-style: none;
     padding-left: 20px;
     padding-right: 30px;
-      
+
 }
+
 a {
     font-weight: bold;
     color: white;
     list-style: none;
     font-family: 'Mulish';
 }
+
 a .nav__lien:hover,
 a .nav__lien:active {
     font-weight: bold;
