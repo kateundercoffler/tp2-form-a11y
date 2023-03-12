@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Noto+Serif:wght@400;700&display=swap');
 
 @import url(normalize.css);
 @import url(utilitaires.css);
@@ -18,10 +18,21 @@ html {
     margin-right: 3rem;
     margin-left: 3rem;
  }
+ img {
+    max-width: 150px;
+    margin-left: 250px;
+    margin-top: 20px;
+ }
+
+ /* TITRE */
+ .titre {
+    font-family: 'Noto Serif';
+    font-size: 3rem;
+ }
 
 /* HEADERS */
 h1 {
-    font-family:'Noto Serif';
+    font-family: 'Noto Serif';
     font-size: 2rem;
 }
 h2,
@@ -33,6 +44,21 @@ header {
     background-color: rgb(128, 106, 97);
     width: 100%;
     margin-right: -15px;     
+}
+
+/* FORMULAIRES */
+h2 {
+    font-weight: bold;
+}
+fieldset {
+    border: none;
+}
+.form__section.ctnValidation.disponibilite {
+    display: flex;
+    border: 1px solid rgb(61, 80, 74);
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: space-evenly;
 }
 
 /* NAVIGATION */
