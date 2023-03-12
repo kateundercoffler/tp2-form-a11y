@@ -52,116 +52,118 @@
                     <legend>
                         <h2>1. Dates du séjour</h2>
                     </legend>
-                    <fieldset class="form__section ctnValidation arrivee">
-                        <legend>
-                            <h3>Date d'arrivée</h3>
-                        </legend>
-                        <div class="fieldset__disponibilites">
-                            <select id="jour-arrivee" name="jour-arrivee">
-                                <option label="jour"></option>
-                                <!-- option[value=$]{$}*31 -->
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                            </select>
-                            <select id="mois-arrivee" name="mois-arrivee">
-                                <option label="mois"></option>
-                                <!-- option[value=janvier]{janvier}*12 -->
-                                <option value="janvier">janvier</option>
-                                <option value="février">février</option>
-                                <option value="mars">mars</option>
-                                <option value="avril">avril</option>
-                            </select>
-                            <select id="annee-arrivee" name="annee-arrivee">
-                                <option label="année"></option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                            </select>
-                        </div>
-                    </fieldset>
-                    <fieldset class="form__section ctnValidation depart">
-                        <legend>
-                            <h3>Date de départ</h3>
-                        </legend>
-                        <div class="date__depart">
-                            <select id="jour-depart" name="jour-depart">
-                                <option label="jour"></option>
-                                <!-- option[value=$]{$}*31 -->
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                            </select>
-                            <select id="mois-depart" name="mois-depart">
-                                <option label="mois"></option>
-                                <!-- option[value=janvier]{janvier}*12 -->
-                                <option value="janvier">janvier</option>
-                                <option value="février">février</option>
-                                <option value="mars">mars</option>
-                                <option value="avril">avril</option>
-                            </select>
-                            <select id="annee-depart" name="annee-depart">
-                                <option label="année"></option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                            </select>
-                        </div>
-                    </fieldset>
+                    <div class="form__section-dates">
+                        <fieldset class="form__section ctnValidation arrivee">
+                            <legend>
+                                <h3>Date d'arrivée</h3>
+                            </legend>
+                            <div class="fieldset__disponibilites">
+                                <select id="jour-arrivee" name="jour-arrivee">
+                                    <option label="jour"></option>
+                                    <!-- option[value=$]{$}*31 -->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select id="mois-arrivee" name="mois-arrivee">
+                                    <option label="mois"></option>
+                                    <!-- option[value=janvier]{janvier}*12 -->
+                                    <option value="janvier">janvier</option>
+                                    <option value="février">février</option>
+                                    <option value="mars">mars</option>
+                                    <option value="avril">avril</option>
+                                </select>
+                                <select id="annee-arrivee" name="annee-arrivee">
+                                    <option label="année"></option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form__section ctnValidation depart">
+                            <legend>
+                                <h3>Date de départ</h3>
+                            </legend>
+                            <div class="date__depart">
+                                <select id="jour-depart" name="jour-depart">
+                                    <option label="jour"></option>
+                                    <!-- option[value=$]{$}*31 -->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select id="mois-depart" name="mois-depart">
+                                    <option label="mois"></option>
+                                    <!-- option[value=janvier]{janvier}*12 -->
+                                    <option value="janvier">janvier</option>
+                                    <option value="février">février</option>
+                                    <option value="mars">mars</option>
+                                    <option value="avril">avril</option>
+                                </select>
+                                <select id="annee-depart" name="annee-depart">
+                                    <option label="année"></option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
                     <p class="bouton__verfifier">
                         <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
                     </p>
@@ -180,29 +182,27 @@
                 <legend>
                     <h2>2. Nombre de personnes </h2>
                 </legend>
-                <div class="row">
-                    <p class="row__adultes">
+                <div class="form__section-personnes">
+                    <p class="personnes__adultes">
                         <label for="adultes">Adultes (maximum 4):</label>
                         <input id="adultes" minlength="1" maxlength="4" name="adultes">
                     </p>
-                    <div class="row">
-                        <p class="row__enfants">
-                            <label for="adultes">Enfants (maximum 5):</label>
-                            <input id="enfants" minlength="1" maxlength="5" name="enfants">
-                        </p>
-                    </div>
-
-                    <h3>Notes:</h3>
-                    <ol>
-                        <li>
-                            La chambre familiale peut loger jusqu'à 6 personnes
-                        </li>
-                        <li>Si vous avez besoin de louer plusieurs chambres, <a href="#">contactez-nous
-                                directement</a></li>
-
-                    </ol>
-
+                    <p class="personnes__enfants">
+                        <label for="adultes">Enfants (maximum 5):</label>
+                        <input id="enfants" minlength="1" maxlength="5" name="enfants">
+                    </p>
                 </div>
+                <h3>Notes:</h3>
+                <ol>
+                    <li>
+                        La chambre familiale peut loger jusqu'à 6 personnes
+                    </li>
+                    <li>Si vous avez besoin de louer plusieurs chambres, <a href="#">contactez-nous
+                            directement</a></li>
+
+                </ol>
+
+
                 <p class="erreur">
                     <span>
                         <span class="screen-reader-only">Avertissement</span>
@@ -249,14 +249,14 @@
                         moins
                         de 12 ans c'est
                         12.50$
-                        CAN.</p>
+                        CAN.</p></div>
                     <p class="erreur">
                         <span>
                             <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--erreur" aria-hidden="true"></span>
                         </span>
                         Message d'erreur par JavaScript
-                </div>
+                
             </fieldset>
 
             <fieldset class="form__section ctnValidation identification">
@@ -304,15 +304,17 @@
                         Message d'erreur par JavaScript
                     </p>
                 </div>
-                <label for="telephone">Téléphone :</label>
-                <input type="text" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone" name="telephone">
-                <p class="erreur">
-                    <span>
-                        <span class="screen-reader-only">Avertissement</span>
-                        <span class="icone icone--erreur" aria-hidden="true"></span>
-                    </span>
-                    Message d'erreur par JavaScript
-                </p>
+                <div class="ctnValidation telephone">
+                    <label for="telephone">Téléphone :</label>
+                    <input type="text" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone" name="telephone">
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--erreur" aria-hidden="true"></span>
+                        </span>
+                        Message d'erreur par JavaScript
+                    </p>
+                </div>
             </fieldset>
 
             <p class="bouton__confirmation"><button name="confirmer" value="confirmer">Confirmer la

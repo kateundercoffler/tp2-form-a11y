@@ -16,9 +16,11 @@ html {
 }
 
 main {
-    max-width: 1000px;
-    margin-right: 3rem;
-    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
@@ -107,22 +109,30 @@ fieldset {
     border: none;
 }
 
-.form__section.ctnValidation.disponibilite {
+.form {
+    margin: 30px;
+}
+.form__section-dates{
     display: flex;
-    font-family: 'Mulish';
-    border: 1px solid rgb(61, 80, 74);
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-.form__section.ctnValidation.personnes {
+.form__section.ctnValidation {
     display: flex;
-    border: 1px solid rgb(61, 80, 74);
     font-family: 'Mulish';
-    flex-direction: row;
+    border: 1px solid rgb(61, 80, 74);
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .form__section.ctnValidation.choixChambres {
@@ -131,7 +141,6 @@ fieldset {
 }
 
 .row li {
-    display: flex;
     list-style: none;
     justify-content: center;
 }
@@ -162,14 +171,7 @@ input[type=radio] {
 
 }
 
-.form__section.ctnValidation.identification {
-    display: flex;
-    border: 1px solid rgb(61, 80, 74);
-    font-family: 'Mulish';
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+
 
 /* NAVIGATION */
 .nav__liste {
