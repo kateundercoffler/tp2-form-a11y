@@ -184,17 +184,29 @@ input[type=radio] {
 
 /* NAVIGATION */
 .nav__liste {
-    display: none;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     font-size: 1rem;
     background-color: rgb(61, 80, 74);
     list-style: none;
     padding: 10px;
     padding-left: 20px;
     padding-right: 30px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
 
+.nav__liste-item {
+    padding: 5px 0 5px 0;
+}
+
+.menu-ouvert {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.menu-fermer {
+    display: none;
 }
 
 .navigation__principale-bouton {
@@ -224,7 +236,8 @@ input[type=radio] {
 
     .nav__liste {
         display: flex;
-        
+        flex-direction: row;
+        align-items: center;
     }
 
     .navigation__principale {

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
 
+
     <title>Réservation | Auberge du jacana africain</title>
 
 </head>
@@ -20,11 +21,11 @@
             <p class="titre">Auberge du <span class="jacana">jacana</span> africain</p>
         </a>
         <nav class="navigation__principale">
-            <button class="navigation__principale-bouton">
+            <button id="btnMenu" class="navigation__principale-bouton">
                 <span class="navigation__principale-span">Menu
                 </span>
             </button>
-            <ul class="nav__liste">
+            <ul id="menu" class="nav__liste menu-fermer">
                 <li class="nav__liste-item">
                     <a href="../index.html" class="nav__lien">ACCUEIL</a>
                 </li>
@@ -58,7 +59,7 @@
                                 <h3>Date d'arrivée</h3>
                             </legend>
                             <div class="fieldset__disponibilites">
-                                <select id="jour-arrivee" name="jour-arrivee">
+                                <select id="jour-arrivee" name="jour-arrivee" required>
                                     <option label="jour"></option>
                                     <!-- option[value=$]{$}*31 -->
                                     <option value="1">1</option>
@@ -93,7 +94,7 @@
                                     <option value="30">30</option>
                                     <option value="31">31</option>
                                 </select>
-                                <select id="mois-arrivee" name="mois-arrivee">
+                                <select id="mois-arrivee" name="mois-arrivee" required>
                                     <option label="mois"></option>
                                     <!-- option[value=janvier]{janvier}*12 -->
                                     <option value="janvier">janvier</option>
@@ -101,7 +102,7 @@
                                     <option value="mars">mars</option>
                                     <option value="avril">avril</option>
                                 </select>
-                                <select id="annee-arrivee" name="annee-arrivee">
+                                <select id="annee-arrivee" name="annee-arrivee" required>
                                     <option label="année"></option>
                                     <option value="2023">2023</option>
                                     <option value="2024">2024</option>
@@ -113,7 +114,7 @@
                                 <h3>Date de départ</h3>
                             </legend>
                             <div class="date__depart">
-                                <select id="jour-depart" name="jour-depart">
+                                <select id="jour-depart" name="jour-depart" required>
                                     <option label="jour"></option>
                                     <!-- option[value=$]{$}*31 -->
                                     <option value="1">1</option>
@@ -148,7 +149,7 @@
                                     <option value="30">30</option>
                                     <option value="31">31</option>
                                 </select>
-                                <select id="mois-depart" name="mois-depart">
+                                <select id="mois-depart" name="mois-depart" required>
                                     <option label="mois"></option>
                                     <!-- option[value=janvier]{janvier}*12 -->
                                     <option value="janvier">janvier</option>
@@ -156,7 +157,7 @@
                                     <option value="mars">mars</option>
                                     <option value="avril">avril</option>
                                 </select>
-                                <select id="annee-depart" name="annee-depart">
+                                <select id="annee-depart" name="annee-depart" required>
                                     <option label="année"></option>
                                     <option value="2023">2023</option>
                                     <option value="2024">2024</option>
@@ -185,11 +186,11 @@
                 <div class="form__section-personnes">
                     <p class="personnes__adultes">
                         <label for="adultes">Adultes (maximum 4):</label>
-                        <input id="adultes" minlength="1" maxlength="4" name="adultes">
+                        <input type="number" id="adultes" min="1" max="4" name="adultes" required>
                     </p>
                     <p class="personnes__enfants">
                         <label for="adultes">Enfants (maximum 5):</label>
-                        <input id="enfants" minlength="1" maxlength="5" name="enfants">
+                        <input type="number" id="enfants" min="1" max="5" name="enfants">
                     </p>
                 </div>
                 <h3>Notes:</h3>
@@ -199,10 +200,7 @@
                     </li>
                     <li>Si vous avez besoin de louer plusieurs chambres, <a href="#">contactez-nous
                             directement</a></li>
-
                 </ol>
-
-
                 <p class="erreur">
                     <span>
                         <span class="screen-reader-only">Avertissement</span>
@@ -227,18 +225,18 @@
                                     alt="chambre avec lit type double" width="500"></label>
                         </li>
                         <li class="row__chambreDouble">
-                            <input type="radio" id="type_double" name="type_chambre">
+                            <input type="radio" required="required" id="type_double" name="type_chambre">
                             <label for="type_double"><img class="chambres"
                                     src="../images/types-de-chambre/2-lits-double.jpg"
                                     alt="chambre avec deux lit type double" width="500"></label>
                         </li>
                         <li class="row__chambreFamille">
-                            <input type="radio" id="type_familiale" name="type_chambre">
+                            <input type="radio" required="required" id="type_familiale" name="type_chambre">
                             <label for="type_familiale"><img class="chambres"
                                     src="../images/types-de-chambre/chambre-familiale.jpg"
                                     alt="chambre familiale avec lits pour enfants et adultes" width="500"></label>
                         </li>
-                    </ul>                    
+                    </ul>
                 </fieldset>
                 <div class="cocher__dejeuner">
                     <input type="checkbox" id="dejeuner" name="dejeuner">
@@ -247,14 +245,15 @@
                         moins
                         de 12 ans c'est
                         12.50$
-                        CAN.</p></div>
-                    <p class="erreur">
-                        <span>
-                            <span class="screen-reader-only">Avertissement</span>
-                            <span class="icone icone--erreur" aria-hidden="true"></span>
-                        </span>
-                        Message d'erreur par JavaScript
-                
+                        CAN.</p>
+                </div>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--erreur" aria-hidden="true"></span>
+                    </span>
+                    Message d'erreur par JavaScript
+
             </fieldset>
 
             <fieldset class="form__section ctnValidation identification">
@@ -265,7 +264,7 @@
                     <p>
                         <label for="prenom">Prénom :</label>
                         <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+" id="prenom" minlength="3" maxlength="45"
-                            name="prenom">
+                            name="prenom" required>
                     </p>
                     <p class="erreur">
                         <span>
@@ -279,7 +278,7 @@
                     <p>
                         <label for="nom">Nom :</label>
                         <input type="text" required pattern="[a-zA-ZÀ-ÿ \-]+" minlength="3" maxlength="45" id="nom"
-                            name="nom">
+                            name="nom" required>
                     </p>
                     <p class="erreur">
                         <span>
@@ -292,7 +291,7 @@
                 <div class="ctnValidation courriel">
                     <p>
                         <label for="email">Email :</label>
-                        <input type="email" required minlength="3" maxlength="20" id="email" name="email">
+                        <input type="email" required minlength="3" id="email" name="email">
                     </p>
                     <p class="erreur">
                         <span>
@@ -304,7 +303,8 @@
                 </div>
                 <div class="ctnValidation telephone">
                     <label for="telephone">Téléphone :</label>
-                    <input type="text" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone" name="telephone">
+                    <input type="text" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone" name="telephone"
+                        required>
                     <p class="erreur">
                         <span>
                             <span class="screen-reader-only">Avertissement</span>
@@ -347,5 +347,6 @@
         </p>
     </footer>
 </body>
+<script src="../js/app.js"></script>
 
 </html>
