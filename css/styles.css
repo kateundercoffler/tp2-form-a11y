@@ -31,6 +31,7 @@ img {
     font-family: 'Noto Serif';
     font-size: 1.8rem;
     color: white;
+    padding-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -94,6 +95,7 @@ header a {
 }
 
 /* FORMULAIRES */
+
 h2 {
     font-weight: bold;
 }
@@ -193,6 +195,14 @@ input[type=radio] {
     margin-right: 5px;
 }
 
+.navigation__principale {
+    color: white;
+    font-family: 'Mulish';
+    text-decoration: none;
+    background-color: rgb(103, 126, 119);
+    padding: 2px;
+}
+
 @media (min-width: 768px) {
     .navigation__principale-bouton {
         display: none;
@@ -208,14 +218,6 @@ input[type=radio] {
     }
 }
 
-.navigation__principale {
-    color: white;
-    font-family: 'Mulish';
-    text-decoration: none;
-    background-color: rgb(103, 126, 119);
-    padding: 2px;
-}
-
 .nav__lien:hover,
 .nav__lien:active {
     font-weight: bold;
@@ -225,6 +227,22 @@ input[type=radio] {
     color: white;
     text-decoration: none;
 }
+
+/* STYLE POUR LES BOUTONS */
+
+button {
+    background-color: rgb(197, 255, 237);
+    padding: 10px;
+    font-family: 'Mulish';
+    color: black;    
+}
+button:hover,
+button:focus {
+    font-weight: bold;
+    background-color: rgb(166, 234, 213);
+    box-shadow: 5px 5px 5px rgb(120, 120, 120);
+}
+
 
 /* ASIDE */
 aside {
