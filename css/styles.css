@@ -4,7 +4,8 @@
 
 @import url(normalize.css);
 @import url(utilitaires.css);
-/* @import url(typo.css); */
+/* @import url(typo.css); 
+Typo enlevé parce que j'ai travaillé dans styles.css*/
 
 
 html {
@@ -22,15 +23,22 @@ main {
 
 img {
     max-width: 150px;
-    margin-left: 250px;
-    margin-top: 20px;
+    margin: auto;
 }
 
 /* TITRE */
 .titre {
     font-family: 'Noto Serif';
-    font-size: 3rem;
+    font-size: 1.8rem;
+    color: white;
 }
+
+@media (min-width: 768px) {
+    .titre {
+        font-size: 3rem;
+    }
+}
+
 
 /* HEADERS */
 h1 {
@@ -48,6 +56,17 @@ header {
     background-color: rgb(128, 106, 97);
     width: 100%;
     margin-right: -15px;
+    padding-top: 30px;
+}
+
+header p {
+    margin-left: 40px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+header a {
+    text-decoration: none;
 }
 
 /* FORMULAIRES */
@@ -61,6 +80,7 @@ fieldset {
 
 .form__section.ctnValidation.disponibilite {
     display: flex;
+    font-family: 'Mulish';
     border: 1px solid rgb(61, 80, 74);
     flex-direction: row;
     flex-wrap: wrap;
@@ -70,6 +90,7 @@ fieldset {
 .form__section.ctnValidation.personnes {
     display: flex;
     border: 1px solid rgb(61, 80, 74);
+    font-family: 'Mulish';
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -77,6 +98,7 @@ fieldset {
 
 .form__section.ctnValidation.choixChambres {
     border: 1px solid rgb(61, 80, 74);
+    font-family: 'Mulish';
 }
 
 .row li {
@@ -87,46 +109,99 @@ fieldset {
 
 /* IMAGES - FIELDSETS */
 .chambres {
-    max-width: 300px;
+    max-width: 180px;
     margin-left: 20px;
     justify-content: center;
 }
 
+.cocher__dejeuner {
+    display: block;
+    justify-content: center;
+
+}
+
+.form__section.ctnValidation.identification {
+    display: flex;
+    border: 1px solid rgb(61, 80, 74);
+    font-family: 'Mulish';
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 /* NAVIGATION */
 .nav__liste {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
     background-color: rgb(61, 80, 74);
     list-style: none;
+    padding: 10px;
     padding-left: 20px;
     padding-right: 30px;
 
 }
 
-a {
-    font-weight: bold;
+.navigation__principale-bouton {
+    display: block;
+    margin-left: auto;
+    background-color: rgb(61, 80, 74);
     color: white;
-    list-style: none;
+    font-weight: bold;
     font-family: 'Mulish';
+    text-transform: uppercase;
+    padding: 10px;
+    margin-right: 5px;
 }
 
-a .nav__lien:hover,
-a .nav__lien:active {
+@media (min-width: 768px) {
+    .navigation__principale-bouton {
+        display: none;
+    }
+
+    .nav__liste {
+        display: flex;
+        background-color: none;
+    }
+    .navigation__principale {
+        background-color: rgb(61, 80, 74);
+    }
+}
+
+.navigation__principale {
+    color: white;
+    font-family: 'Mulish';
+    text-decoration: none;
+    background-color: rgb(103, 126, 119);
+    padding: 2px;
+}
+
+.nav__lien:hover,
+.nav__lien:active {
     font-weight: bold;
 }
 
-
+.nav__lien {
+    color: white;
+    text-decoration: none;
+}
 
 /* ASIDE */
 aside {
-    margin-right: 3rem;
-    margin-left: 3rem;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-family: 'Mulish';
 }
 
 .footer__paragraphe {
-    margin-right: 3rem;
-    margin-left: 3rem;
+    align-items: center;
+    background-color: rgb(176, 189, 185);
+    font-family: 'Mulish';
+    padding: 20px;
+}
+
+.footer__paragraphe a {
+    color: black;
 }
