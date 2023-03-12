@@ -224,7 +224,7 @@ input[type=radio] {
 
     .nav__liste {
         display: flex;
-        background-color: none;
+        
     }
 
     .navigation__principale {
