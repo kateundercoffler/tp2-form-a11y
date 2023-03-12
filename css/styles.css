@@ -70,9 +70,6 @@ header a {
 }
 
 /* ERREURS */
-/* .erreur {
-    
-} */
 
 .icone {
     display: inline-block;
@@ -91,6 +88,7 @@ header a {
 .icone--avertissement {
     background-position: 49px 0;
 }
+
 .icone--erreur {
     background-position: 101px 0;
 }
@@ -133,11 +131,24 @@ fieldset {
     justify-content: center;
 }
 
-/* IMAGES - FIELDSETS */
+/* IMAGES DE CHAMBRES */
 .chambres {
     max-width: 180px;
     margin-left: 20px;
     justify-content: center;
+}
+/* FILTRE POUR LES IMAGES */
+input[type=radio] + label {
+    filter: grayscale(100%);
+}
+
+input[type=radio]:focus + label,
+input[type=radio]:hover + label,
+input[type=radio]:checked + label {
+    filter: none;
+}
+input[type=radio] {
+    opacity: 0;
 }
 
 .cocher__dejeuner {
@@ -191,6 +202,7 @@ fieldset {
         display: flex;
         background-color: none;
     }
+
     .navigation__principale {
         background-color: rgb(61, 80, 74);
     }
